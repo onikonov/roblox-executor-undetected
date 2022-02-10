@@ -1,4 +1,4 @@
-# Automaticaly Withdraw from many Qiwi to One
+# Automaticaly Withdraw from many Qiwi's to One
 
 # Requirements
 - SimpleQIWI
