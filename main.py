@@ -9,8 +9,8 @@ pygame.init()
 song = pygame.mixer.Sound('sound.mp3')
 clock = pygame.time.Clock()
 
-print (Fore.GREEN + " .::::::\ QIWI WALLET /::::::.")
-summ = input(Fore.YELLOW + "Введите Ваш! Qiwi +7: ")
+print (Fore.GREEN + " QIWI WALLET ")
+summ = input( "Input YOURE QiWi Phone Number: ")
 def EbatNihyiaQiwiPerevod():
     while True:
         lists = open('token.txt').read().split('\n')
@@ -21,15 +21,15 @@ def EbatNihyiaQiwiPerevod():
                 if bal[0] > 1:
                     current_datetime = datetime.now()
                     api.pay(account=str(summ), amount=int(bal[0]), comment=' ')
-                    print(Fore.YELLOW +  '!!!!!!! --- !!!! Скомуниздили ' + str(bal[0]) + " рублей !!!! --- !!!!!!!")
+                    print(Fore.RED +  'Got it!' + str(bal[0]) + "  !!!! --- !!!!!!!")
                     f = open('log.txt', 'a')
-                    f.write(' Перевод:  ' + str(bal[0]))
+                    f.write(' Got it:  ' + str(bal[0]) + '\n')
                     f.close()
                     song.play()
                       
             else:
-                    print(" .:: --- На балансе " + str(bal[0]) + " рублей --- ::.")
-                    print (Fore.YELLOW + "....-=Ждем 10 секунд=-...")
+                    print(" .:: --- Ballance " + str(bal[0]) + "  --- ::.")
+                    print (Fore.YELLOW + "....-=10 seconds wait=-...")
         except ValueError:
             pass
             
